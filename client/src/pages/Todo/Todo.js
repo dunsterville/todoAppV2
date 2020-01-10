@@ -4,6 +4,8 @@ import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import TodoContext from '../../utils/TodoContext'
 import axios from 'axios'
+import Form from '../../components/Form';
+
 
 class Todo extends Component {
 
@@ -40,6 +42,7 @@ class Todo extends Component {
           <h1>Hello World</h1>
 
           <TodoDisplay />
+          <Form/>
         </Container>
       </TodoContext.Provider>
     )
