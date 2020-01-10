@@ -3,10 +3,19 @@ const { ToDo } = require('../models')
 
 // Get ALL items
 app.get('/todo', (req, res) => {
+  console.log('test')
   ToDo.find()
     .then(todo => res.json(todo))
     .catch(err => console.error(err))
 })
+
+// Get ALL items
+app.post('/todo', (req, res) => {
+  ToDo.create(req.body)
+    .then(todo => res.json(todo))
+    .catch(err => console.error(err))
+})
+
 
 // Delete item from list
 app.delete('/todo/:id', (req, res) => {
