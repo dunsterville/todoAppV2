@@ -1,4 +1,5 @@
 import React, { Component }  from 'react'
+import TodoDisplay from '../../components/TodoDisplay'
 import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import TodoContext from '../../utils/TodoContext'
@@ -8,7 +9,7 @@ class Todo extends Component {
 
   state = {
     todo: '',
-    todoDisplay: [],
+    todoDisplay: ['test', 'test2', 'todo3', 'todo4'],
     handleInputChange: e => {
       this.setState({ [e.target.name]: e.target.value})
     },
@@ -37,6 +38,8 @@ class Todo extends Component {
         <CssBaseline />
         <Container>
           <h1>Hello World</h1>
+
+          <TodoDisplay />
         </Container>
       </TodoContext.Provider>
     )
