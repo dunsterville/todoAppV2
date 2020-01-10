@@ -18,7 +18,7 @@ class Todo extends Component {
     handleFormSubmit: e => {
       e.preventDefault()
       // Post to database
-      axios.post(`/`)
+      axios.post(`/todo`)
         .then(({ data }) => {
           console.log(data)
           // Push todo to display array
@@ -41,8 +41,8 @@ class Todo extends Component {
         <Container>
           <h1>Hello World</h1>
 
+          <Form />
           <TodoDisplay />
-          <Form/>
         </Container>
       </TodoContext.Provider>
     )

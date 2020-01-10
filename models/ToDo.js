@@ -1,8 +1,8 @@
 module.exports = (models, Schema) => {
 
     const ToDo = new Schema ({
-        ToDoItem = String,
-        Completed =  {
+        ToDoItem: String,
+        Completed:  {
             type: Boolean,
             default: false
         }
