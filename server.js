@@ -9,4 +9,8 @@ app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
-app.listen(process.env.PORT || 3000)
+require('./routes')(app)
+
+require('mongoose')
+  .connection
+  .once('open', () => app.listen(process.env.PORT || 3001))
